@@ -1,10 +1,11 @@
 document.querySelector('.parametro-senha__texto');
-
-numeroSenha.textContent = 5;
+let = tamanhoSenha: 5;
+numeroSenha.textContent = tamanhoSenha;
 
 const botoes = document.querySelectorAll('.parametro-senha__botao');
 
 botoes[0]. onclick = diminuiTamanho;
+botoes[1]. onclick = aumentaTamanho;
 
 function diminuiTamanho() {
     if(tamanhoSenha > 1) {
@@ -13,10 +14,11 @@ function diminuiTamanho() {
 
     }
     numeroSenha.textContent = tamanhoSenha;
+    geraSenha();
 }
 
 function aumentaTamanho(){
-    if (tamanhoSenha <20) {
+    if (tamanhoSenha < 20) {
     //tamanhoSenha= tamanhoSenha +1;
     tamanhoSenha++;
 
@@ -32,12 +34,11 @@ for (i=0; i < checkbox.lenght;i++) {
     checkbox[i].onclick = geraSenha;
 }
 
-
-
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
 const numeros = '0123456789';
 const simbolos = '!@#&*';
+
 
 geraSenha();
 
@@ -55,14 +56,14 @@ function geraSenha() {
     if (checkbox[3].checked){
         alfabeto= alfabeto + simbolos;
     }
-    console.log(alfabeto);
+    
     let senha= '';
     for (let i = 0; i < tamanhoSenha;i++) {
-    let numeroAleatório = Math.random()*letrasMaiusculas.lenght;
+    let numeroAleatório = Math.random() * alfabeto.lenght;
     numeroAleatório = Math.floor(numeroAleatório);
-    senha = senha +  letrasMaiusculas{numeroAleatório};
-   
+    senha = senha +  alfabeto[numeroAleatório];
+    
     }
+campoSenha.value = senha;
 }
 
-campoSenha.value = senha;
