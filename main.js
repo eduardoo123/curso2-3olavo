@@ -68,5 +68,17 @@ function geraSenha() {
     
     }
     campoSenha.value = senha;
+    classificaSenha();
 }
 
+    function classificaSenha() {
+        forcaSenha.classlist.remove('fraca');
+        if (tamanhoSenha > 11){
+        forcaSenha.classlist.add('forte');
+    } else if (tamanhoSenha > 5 && tamanhoSenha < 12) {
+        forcaSenha.classlist.add('media');
+    } else if (tamanhoSenha < 5) {
+        forcaSenha.classlist.add('fraca');
+    }
+
+}
