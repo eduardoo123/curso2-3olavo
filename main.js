@@ -1,4 +1,4 @@
-document.querySelector('.parametro-senha__texto');
+const numeroSenha = document.querySelector('.parametro-senha__texto');
 let = tamanhoSenha: 12;
 numeroSenha.textContent = tamanhoSenha;
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -16,7 +16,7 @@ botoes[1]. onclick = aumentaTamanho;
 
 function diminuiTamanho() {
     if(tamanhoSenha > 1) {
-        tamanhoSenha = tamanhoSenha-1;
+       // tamanhoSenha = tamanhoSenha-1;
         tamanhoSenha--;
 
     }
@@ -83,5 +83,5 @@ function geraSenha() {
         forcaSenha.classlist.add('fraca');
     }
         const valorEntropia = document.querySelector('.entropia');
-        valorEntropia.textContent = "Um computador pode levar até" + Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir sua senha.";
+        valorEntropia.textContent = "Um computador pode levar até" + Math.floor(2**entropia/(100e6*60*60*24)) + " dias para descobrir essa senha.";
 }
